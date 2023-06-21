@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .list {
+      display: flex;
+      gap: 30px;
+    }
+    .item {
+      width: calc((100% - 100px)/2);
+    }
+    img, video {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="list">
+    <div class="item">
+      <video width="1920" height="1080" src="./assets/video.mp4" autoplay muted loop></video>
+      <p>元の動画　ファイルサイズ：6.6MB</p>
+    </div>
+    <div class="item">
+      <img width="384" height="216" src="./assets/video_m.gif">
+      <p>Adobe Expressで変換したGIF　設定は「中品質」<br>ファイルサイズ：6.1MB</p>
+    </div>
+    <div class="item">
+      <img width="1920" height="1080" src="./assets/video_fps10_qs20_cl6.webp">
+      <p>Animated WebP　ffmpegで変換　fps=10・qscale=20・compless_level=6<br>ファイルサイズ：3.0MB</p>
+    </div>
+  </div class="list">
+</body>
+</html>
